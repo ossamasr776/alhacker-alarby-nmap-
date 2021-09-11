@@ -1,6 +1,5 @@
 import os 
 os.system("clear")
-print ("/^\/^\")
 print ("                  _|__|  O|")
 print ("         \/     /~     \_/ \")
 print ("          \____|__________/  \")
