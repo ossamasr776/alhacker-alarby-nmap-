@@ -1,0 +1,35 @@
+import os 
+os.system("clear")
+print ("/^\/^\")
+print ("                  _|__|  O|")
+print ("         \/     /~     \_/ \")
+print ("          \____|__________/  \")
+print ("                 \_______      \")
+print ("                         `\     /                \
+print ("                           |     |")                  \
+print ("                          /      /")                    \
+print ("                         /     /")                       \
+print ("                       /      /")                         \ \
+print ("                      /     /")                            \  \
+print ("                    /     /")             _----_            \      
+print ("              /     /           _-~      ~-_         |   |
+print ("                 (      (        _-~    _--_    ~-_     _/   |
+                   \      ~-____-~    _-~    ~-_    ~-_-~    /
+                     ~-_           _-~          ~-_       _-~   - OSSA -
+                        ~--______-~                ~-___-~
+
+
+pip3 install python-nmap
+import nmap
+scanner = nmap.PortScanner()
+target = input('Please enter IP address')
+scanner.scan(target,'1-1024','-sV')
+print("the host name is: " + scanner[target].hostname())
+print("the host status is: " + scanner[target].state())
+keys = scanner[target]['tcp'].keys()
+for i in keys:
+print('-----------------------')
+print('the port ' + str(i) + " : ")
+res = scanner[target]['tcp'][i]
+for re in res:
+print(re + " : " + res[re])
