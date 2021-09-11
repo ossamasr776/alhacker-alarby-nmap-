@@ -1,4 +1,3 @@
-  
 import nmap
 scanner = nmap.PortScanner()
 target = input('Please enter IP address')
